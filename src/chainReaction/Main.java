@@ -1,6 +1,7 @@
 package chainReaction;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -36,7 +37,7 @@ public class Main{
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         //Graphics graphics = null;
         Board board=new Board();
-
+        board.allNull();
 
         frame.addMouseListener(new MouseAdapter() {
             @Override
@@ -51,9 +52,6 @@ public class Main{
                 board.something();
                 board.something1();
                 board.display(board.numberOfBalls);
-                //board.generateLimit();
-                int[][][] a=new int [10][6][2];
-                board.display(a);
                 board.repaint();
             }
         });
